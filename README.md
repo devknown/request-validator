@@ -2,6 +2,8 @@
 
 Make your apps validation easily (inspired by Laravel Validation)
 
+the original project: <a href="https://github.com/progsmile/request-validator/graphs/contributors">progsmile/request-validator</a>. this version adds Mysqli Adapter.
+
 ---
 
 Page Index:
@@ -164,4 +166,3 @@ For additional information see [PHPUnit The Command-Line Test Runner](http://php
 ## License
 
 PHP Request Validator is open-sourced software licensed under the [GNU GPL](LICENSE).
-original fork: <a href="https://github.com/progsmile/request-validator/graphs/contributors">progsmile/request-validator</a>.
