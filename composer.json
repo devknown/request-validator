@@ -1,0 +1,36 @@
+{
+    "name": "devknown/request-validator",
+    "description": "Simple PHP Request Validator",
+    "keywords": [
+        "validation",
+        "PHP",
+        "security",
+        "form",
+        "sanitization",
+        "modeling"
+    ],
+    "require": {
+        "php": ">=5.4",
+        "respect/validation": "1.0.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8"
+    },
+    "license": "GPL-2.0+",
+    "authors": [
+        {
+            "name": "Hassan Azzi",
+            "email": "devknown@gmail.com"
+        }
+    ],
+    "autoload-dev": {
+        "classmap": [
+            "tests/"
+        ]
+    },
+    "autoload": {
+        "psr-4": {
+            "Devknown\\Validator\\": "src/"
+        }
+    }
+}
