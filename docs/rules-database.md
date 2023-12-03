@@ -11,6 +11,7 @@ Rules who uses this:
 
 use Devknown\Validator\Validator as v;
 use Devknown\Validator\DbProviders\PdoAdapter;        // PDO
+use Devknown\Validator\DbProviders\MysqliAdapter;        // Mysqli
 use Devknown\Validator\DbProviders\PhalconAdapter;    // Phalcon
 use Devknown\Validator\DbProviders\WordpressAdapter;  // Wordpress
 
