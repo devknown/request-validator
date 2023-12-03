@@ -2,7 +2,7 @@
 
 Make your apps validation easily (inspired by Laravel Validation)
 
-[![Build Status](https://travis-ci.org/progsmile/request-validator.svg?branch=master)](http://travis-ci.org/progsmile/request-validator)  [![Total Downloads](https://poser.pugx.org/progsmile/request-validator/d/total)](https://packagist.org/packages/progsmile/request-validator) [![License](https://poser.pugx.org/progsmile/request-validator/license.svg)](https://packagist.org/packages/progsmile/request-validator)
+the original project: <a href="https://github.com/progsmile/request-validator/graphs/contributors">progsmile/request-validator</a>. this version adds Mysqli Adapter.
 
 ---
 
@@ -166,4 +166,3 @@ For additional information see [PHPUnit The Command-Line Test Runner](http://php
 ## License
 
 PHP Request Validator is open-sourced software licensed under the [GNU GPL](LICENSE).
-© 2016 Denis Klimenko and <a href="https://github.com/progsmile/request-validator/graphs/contributors">all the contributors</a>.
