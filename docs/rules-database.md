@@ -15,16 +15,19 @@ use Devknown\Validator\DbProviders\PhalconAdapter;    // Phalcon
 use Devknown\Validator\DbProviders\WordpressAdapter;  // Wordpress
 
 # to set the data adapter
-v::setDataProvider(PdoAdapter::class);
 v::setDataProvider(PhalconAdapter::class);
 v::setDataProvider(WordpressAdapter::class);
 
-# Note: if you're using PDO data provider, you must set it up
-v::setupPDO('mysql:host=localhost;dbname=valid', 'root', '123');
+# for PDO
+v::setDataProvider(PdoAdapter::class);
+$pdoInstance = new PDO('mysql:host=localhost;dbname=test', $user, $pass);
+v::setupPDO($pdoInstance);
 
-# or an alternative, let as say we have an instance of PDO class
-$pdo = $this->getPdoInstance();
-v::setPDO($pdo);
+# for Mysqli
+v::setDataProvider(MysqliAdapter::class);
+$mysqliInstance = new mysqli($dbhost, $dbuser, $dbpass,$dbname);
+v::setupMysqli($mysqliInstance);
+
 
 $validation = v::make($_POST, [
     'email'           => 'required|email|unique:users'

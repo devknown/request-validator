@@ -18,22 +18,11 @@ trait MysqliTrait
      * @param string $user         - db username
      * @param string $pass         - db password
      */
-    public static function setupMysqli($host, $name, $user, $pass)
+    public static function setupMysqli($mysqli)
     {
-        try
-        {
-            $connect = new mysqli($host, $user, $pass, $name);
-            /* check connection */
-        	if($connect->connect_errno)
-            {
-                throw new Exception($connect->connect_error);;
-            }
-			$connect->query("set names 'utf8'");
-            /* setting a connection in $_mysqli */
-            self::$mysqli = $connect;
-        }
-        catch (Exception $e)
-        {
+        try {
+            self::$mysqli = $mysqli;
+        } catch (Exception $e) {
             trigger_error($e->getMessage(), E_USER_ERROR);
         }
     }
@@ -57,6 +46,4 @@ trait MysqliTrait
     {
         return self::$mysqli ?: null;
     }
-
-
 }

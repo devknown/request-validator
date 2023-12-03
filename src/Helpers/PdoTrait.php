@@ -17,10 +17,10 @@ trait PdoTrait
      * @param string $user             - db username
      * @param string $password         - db password
      */
-    public static function setupPDO($connectionString, $user, $password)
+    public static function setupPDO($pdo)
     {
         try {
-            self::$pdoInstance = new PDO($connectionString, $user, $password);
+            self::$pdoInstance = $pdo;
         } catch (PDOException $e) {
             trigger_error($e->getMessage(), E_USER_ERROR);
         }
